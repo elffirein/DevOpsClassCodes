@@ -11,7 +11,7 @@ pipeline{
                         SERVICE_CREDS = credentials('jenkins-example-github-pat')
                }
                steps{
-		 echo 'cloning..'
+		 echo 'cloning1..'
                  git $SERVICE_CREDS 'https://github.com/Sonal0409/DevOpsClassCodes.git'
               }
           }
