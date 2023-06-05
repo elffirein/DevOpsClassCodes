@@ -12,7 +12,7 @@ pipeline{
                }
                steps{
 		 echo 'cloning1..'
-                 git credentialsId: 'jenkins-example-github-pat' url: 'https://github.com/Sonal0409/DevOpsClassCodes.git'
+                 git credentialsId: 'jenkins-example-github-pat', url: 'https://github.com/Sonal0409/DevOpsClassCodes.git'
               }
           }
           stage('Compile'){
