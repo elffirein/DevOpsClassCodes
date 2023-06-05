@@ -7,10 +7,12 @@ pipeline{
 	agent any
       stages{
            stage('Checkout'){
-	    
+	    	 environment {
+                        SERVICE_CREDS = credentials('jenkins-example-github-pat')
+               }
                steps{
 		 echo 'cloning..'
-                 git 'https://github.com/Sonal0409/DevOpsClassCodes.git'
+                 git $SERVICE_CREDS 'https://github.com/Sonal0409/DevOpsClassCodes.git'
               }
           }
           stage('Compile'){
